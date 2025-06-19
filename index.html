@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* Color variables for easy theme management */ 
+        /* Color variables for easy theme management */
         :root {
             --primary: #006973;
             --secondary: #000000;
@@ -795,6 +795,112 @@
         text-align: center;
     }
 
+    /* --- MOBILE RESPONSIVE FIXES ONLY --- */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+    max-width: 90vw;
+    max-height: 90vw;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .nav-links {
+    padding-top: 40px;
+  }
+
+  .nav-links li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.85rem;
+  }
+}
+
 
     </style>
 </head>
@@ -989,7 +1095,7 @@
                         <h3>Electrical & Electronic Engineer Trainee</h3>
                         <h4>SLT Digital Lab - Sri Lanka Telecom Research And Development Section</h4>
                         <p class="timeline-date">June 2024 - September 2024</p>
-                        <p>Gained hands-on experience in telecommunications research and development, working on cutting-edge projects in IoT and network infrastructure.</p>
+                        <p>Gained hands-on experience in telecommunications research and development, working on cutting-edge projects in IoT (Smart Agro Project) and network infrastructure.</p>
                     </div>
                 </div>
                 
@@ -998,7 +1104,7 @@
                         <h3>Engineering Undergraduate</h3>
                         <h4>South Eastern University of Sri Lanka</h4>
                         <p class="timeline-date">2022 - 2027</p>
-                        <p>Pursuing B.Sc. Eng.(Hons) in Electrical and Telecommunication Engineering with focus on embedded systems and digital signal processing.</p>
+                        <p>Pursuing B.Sc. Eng.(Hons) in Electrical and Telecommunication Engineering with focus on embedded systems, automation and robotics</p>
                     </div>
                 </div>
                 
@@ -1073,6 +1179,32 @@
                     </div>
                 </div>
             </div>
+            <!-- Project 3# with gallery -->
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-image" onclick="openGallery('smartagro-gallery')">
+                    <img src="agro1.png" alt="Smart Agro Prototype">
+                    <div class="image-overlay">Click to View Gallery</div>
+                </div>
+                <div class="project-info">
+                    <h3>Smart Agro -Smart irrigation system </h3>
+                    <p>IoT-based plant monitoring and irrigation management system with user interface </p>
+                    <div class="project-tags">
+                        <span class="tag">Automation</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">PLC</span>
+                    </div>
+                </div>
+                
+                <!-- Hidden Gallery -->
+                <div id="smartagro-gallery" class="gallery-modal">
+                    <span class="close-btn" onclick="closeGallery('smartagro-gallery')">&times;</span>
+                    <div class="gallery-content">
+                        <img src="agro1.png" alt="agro Prototype Front View">
+                        <img src="agro2.png" alt="agro dashboard ">
+                        <img src="agro3.png" alt="agro farm ">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1132,8 +1264,19 @@ window.onclick = function(event) {
                             <h4>Dr W.G.C.W Kumara</h4>
                             <p>Head of The Department </p>
                             <p>Dept of Electrical & Telecomunnication Engineering </p>
+                            <p>Southeastern University of Sri Lanka</p>
                             <p>Email: itcgc.eng@seu.ac.lk</p>
                             <p>Phone: +94716425358</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h4>Prof. M.A.L. Abdul Haleem</h4>
+                            <p>Dean of Faculty of Engineering </p>
+                            <p>Southeastern University of Sri Lanka </p>
+                            <p>Email: : mala_haleem@seu.ac.lk</p>
+                            <p>Phone: +94672052806</p>
                         </div>
                     </div>
                     
